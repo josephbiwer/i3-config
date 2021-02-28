@@ -1,0 +1,14 @@
+[usr]
+full_text=Joe
+
+[time]
+command=date +'%a, %I:%M'
+interval=1
+
+[temp]
+command=sensors | awk '/^temp1/ {print $2}'
+interval=10
+
+[memory]
+command=free -h | awk '/^Mem:/ {print $3 "/" $2}'
+interval=10
